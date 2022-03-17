@@ -1,0 +1,140 @@
+/* $Id: index.css 25 2009-03-20 14:51:51Z osTiN $ */
+
+html, body
+{
+	color: #000;
+	font-family: Georgia, serif;
+	/*font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;/**/
+	font-size: 14px;
+	margin:0px;
+	padding:0px;
+}
+
+h1
+{
+	color:#c00;
+	/*font-family: Georgia, serif;/**/
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	font-size:28px;
+	font-weight:bold;
+	text-align:center;
+}
+
+h2
+{
+	/*font-family: Georgia, serif;/**/
+	font: 28px 'Roboto Slab',Arial,san-serif;
+	font-size:20px;
+	font-weight:normal;
+	text-align:center;
+}
+
+
+a:link, a:visited {color: #c00;}
+a:hover, a:active {color: #1457aa;text-decoration: none;}
+
+hr
+{
+	border:0;
+	border-top:solid 2px #ccc;
+	margin:20px 0;
+}
+
+#main
+{
+	position:relative;
+	padding:16px 0;
+}
+
+#content
+{
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 2px;
+	border:solid 2px #ccc;
+	width:600px;
+	margin:0 auto;
+	padding:10px 25px 25px;
+	background:#fff;
+}
+
+*:first-child+html #content {padding:25px;}
+* html #content {padding:25px;}
+
+#index #content {width:800px;}
+
+input.submit
+{
+	color:#090;
+	font-weight:bold;
+	font-size:120%;
+}
+input.reset
+{
+	color:#c00;
+	line-height:120%;
+}
+
+#copyright
+{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:10px;
+	text-align:center;
+}
+
+table.product
+{
+	border-top:solid 2px #000;
+	border-bottom:solid 2px #000;
+}
+
+table.product th
+{
+	background:#c00;
+	color:#fff;
+	padding:10px;
+	width:33%;
+}
+table.product th p {margin:0;}
+
+table.product td
+{
+	padding:5px;
+	font-size:11px;
+	vertical-align:top;
+	width:33%;
+	text-align:justify;
+}
+
+
+
+table.product td img
+{
+	float:left;
+	margin-right:4px;
+	margin-bottom:4px;
+}
+
+
+table.topmenu {
+	padding-top:15px;
+	margin-bottom:10px;
+}
+table.topmenu td a {
+	display:block;
+	padding:9px;
+	background:#c30;
+	color:#fff;
+	text-decoration:none;
+	font-size:13px;
+	font-weight:bold;
+}
+table.topmenu td a:hover {
+	background:#ad2e04;
+}
+
+table.topmenu td a.active {
+	background:#ad2e04;
+
+}
