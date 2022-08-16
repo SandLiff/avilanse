@@ -1,5 +1,6 @@
 .page__intro {
 	display: flex;
+	border-bottom: 2px solid rgb(128, 128, 128);
 }
 
 .intro__title {
@@ -38,7 +39,39 @@
 	background-color: rgb(124, 213, 46);
 }
 
-@media(max-width: 1025px) {
+.content__circle {
+	width: 100px;
+	height: 100px;
+	background-color: #000;
+	border-radius: 50%;
+	position: relative;
+	top: 0;
+	left: 0;
+
+	animation-name: white-cirle;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+
+.content__circle:hover {
+	animation-play-state: paused;
+}
+
+@keyframes white-cirle {
+	0% {
+		top: 0;
+		left: 0;
+	}
+	50% {
+		border-radius: 0;
+	}
+	100% {
+		left: 500px;
+	}
+}
+
+@media(max-width: 767px) {
 	.page__intro {
 		display: flex;
 		flex-direction: column;

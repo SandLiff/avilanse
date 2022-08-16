@@ -252,6 +252,7 @@ body._lock {
 /*Main*/
 .page__intro {
   display: flex;
+  border-bottom: 2px solid rgb(128, 128, 128);
 }
 
 .intro__title {
@@ -290,7 +291,54 @@ body._lock {
   background-color: rgb(124, 213, 46);
 }
 
-@media (max-width: 1025px) {
+.content__circle {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-animation-name: white-cirle;
+          animation-name: white-cirle;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+.content__circle:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes white-cirle {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    border-radius: 0;
+  }
+  100% {
+    left: 500px;
+  }
+}
+
+@keyframes white-cirle {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    border-radius: 0;
+  }
+  100% {
+    left: 500px;
+  }
+}
+@media (max-width: 767px) {
   .page__intro {
     display: flex;
     flex-direction: column;
@@ -300,5 +348,77 @@ body._lock {
   }
   .intro__subtitle {
     font-size: 24px;
+  }
+}
+/*About works*/
+.page__aboutworks {
+  margin-top: 170px;
+}
+
+.aboutworks__title {
+  font-size: 62px;
+  text-align: center;
+}
+
+.step-1 {
+  margin-top: 5px;
+  background-color: rgb(129, 97, 97);
+  padding: 15px;
+}
+
+.step-2 {
+  background-color: rgb(96, 124, 81);
+  padding: 15px;
+}
+
+.step-3 {
+  background-color: rgb(122, 130, 63);
+  padding: 15px;
+}
+
+.step-4 {
+  background-color: rgb(87, 70, 135);
+  padding: 15px;
+}
+
+.step-5 {
+  background-color: rgb(129, 67, 105);
+  padding: 15px;
+}
+
+span {
+  font-size: 48px;
+  font-family: serif;
+  margin-right: 10px;
+}
+
+@media (max-width: 769px) {
+  span {
+    font-size: 50px;
+  }
+  .step-1 {
+    background-color: rgb(129, 97, 97);
+    padding: 10px;
+    font-size: 18px;
+  }
+  .step-2 {
+    background-color: rgb(96, 124, 81);
+    padding: 10px;
+    font-size: 18px;
+  }
+  .step-3 {
+    background-color: rgb(122, 130, 63);
+    padding: 10px;
+    font-size: 18px;
+  }
+  .step-4 {
+    background-color: rgb(87, 70, 135);
+    padding: 10px;
+    font-size: 18px;
+  }
+  .step-5 {
+    background-color: rgb(129, 67, 105);
+    padding: 10px;
+    font-size: 18px;
   }
 }
