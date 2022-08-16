@@ -164,7 +164,7 @@ body._lock {
     padding: 17px 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   .menu__icon {
     z-index: 5;
     display: block;
@@ -285,10 +285,11 @@ body._lock {
 
 @media (max-width: 1025px) {
   .intro__title {
-    font-size: 48px;
+    font-size: 30px;
   }
-  .intro__label {
-    font-size: 24px;
+  .intro__subtitle {
+    font-size: 20px;
+    padding-right: 10px;
   }
   .intro__verstka {
     margin-right: 5px;
