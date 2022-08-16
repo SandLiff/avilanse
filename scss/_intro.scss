@@ -1,6 +1,5 @@
 .page__intro {
 	display: flex;
-	
 }
 
 .intro__title {
@@ -37,4 +36,17 @@
 
 .intro__button:hover {
 	background-color: rgb(124, 213, 46);
+}
+
+@media(max-width: 1025px) {
+	.intro__title {
+		font-size: 48px;
+	}
+	.intro__label {
+		font-size: 24px;
+	}
+	.intro__verstka {
+		margin-right: 5px;
+		align-self: start;
+	}
 }
