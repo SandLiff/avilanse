@@ -291,21 +291,14 @@ body._lock {
 }
 
 @media (max-width: 1025px) {
+  .page__intro {
+    display: flex;
+    flex-direction: column;
+  }
   .intro__title {
-    font-size: 37px;
+    font-size: 48px;
   }
   .intro__subtitle {
-    font-size: 27px;
-    padding-right: 10px;
-  }
-  .intro__verstka {
-    margin-right: 5px;
-    align-self: start;
-  }
-  .intro__button {
-    padding: 8px 10px;
-  }
-  .page__section {
-    max-width: 1024px;
+    font-size: 24px;
   }
 }
