@@ -245,7 +245,6 @@ body._lock {
 /*Main*/
 .page__intro {
   display: flex;
-  justify-content: center;
 }
 
 .intro__title {
