@@ -285,6 +285,7 @@ body._lock {
   border-radius: 29px;
   text-transform: uppercase;
   margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 .intro__button:hover {
@@ -348,6 +349,30 @@ body._lock {
   }
   .intro__subtitle {
     font-size: 24px;
+  }
+  @-webkit-keyframes white-cirle {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    50% {
+      border-radius: 0;
+    }
+    100% {
+      left: 200px;
+    }
+  }
+  @keyframes white-cirle {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    50% {
+      border-radius: 0;
+    }
+    100% {
+      left: 200px;
+    }
   }
 }
 /*About works*/
