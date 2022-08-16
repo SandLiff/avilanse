@@ -120,6 +120,13 @@ body._lock {
   z-index: 50;
   width: 40px;
   height: 40px;
+  transition: all 0.3s ease;
+}
+
+.header__logo:hover {
+  background-color: rgb(172, 172, 172);
+  border-radius: 0%;
+  transform: rotate(180deg);
 }
 
 .menu__icon {

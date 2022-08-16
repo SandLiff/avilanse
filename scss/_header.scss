@@ -10,6 +10,7 @@ body._lock {
 	z-index: 10;
 	background-color: rgba(79, 79, 79, 0.684);
 }
+
 .header__container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -26,6 +27,13 @@ body._lock {
 	z-index: 50;
 	width: 40px;
 	height: 40px;
+	transition: all .3s ease;
+}
+
+.header__logo:hover {
+	background-color: rgb(172, 172, 172);
+	border-radius: 0%;
+	transform: rotate(180deg);
 }
 
 .header__menu {
