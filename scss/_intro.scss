@@ -40,14 +40,20 @@
 
 @media(max-width: 1025px) {
 	.intro__title {
-		font-size: 30px;
+		font-size: 37px;
 	}
 	.intro__subtitle {
-		font-size: 20px;
+		font-size: 27px;
 		padding-right: 10px;
 	}
 	.intro__verstka {
 		margin-right: 5px;
 		align-self: start;
+	}
+	.intro__button {
+		padding: 8px 10px;
+	}
+	.page__section {
+		max-width: 1024px;
 	}
 }
