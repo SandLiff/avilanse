@@ -15,5 +15,36 @@ ul li{list-style:none;}
 img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
+/*Setting*/
+
+.wrapper {
+	
+}
+
+/*All*/
+
+.page {
+	padding: 230px 0px 0px 0px;
+	font-family: sans-serif;
+}
+
+.page__section {
+	padding: 30px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #fff;
+}
+
 /*Header*/
+
 @import "_header";
+
+/*Main*/
+
+@import "_intro";

@@ -1,0 +1,40 @@
+.page__intro {
+	display: flex;
+	justify-content: center;
+}
+
+.intro__title {
+	color: rgb(206, 82, 4);
+	font-size: 72px;
+	font-weight: 700;
+}
+
+.intro__subtitle {
+	color: rgb(0, 0, 0);
+	font-size: 48px;
+	font-weight: 700;
+}
+
+.intro__label {
+	align-self: center;
+}
+
+.intro__verstka {
+	margin-right: 10px;
+	position: relative;
+}
+
+.intro__button {
+	display: inline-block;
+	background-color: rgb(117, 182, 61);
+	transition: all .3s ease;
+	padding: 16px 28px;
+	color: #fff;
+	border-radius: 29px;
+	text-transform: uppercase;
+	margin-top: 50px;
+}
+
+.intro__button:hover {
+	background-color: rgb(124, 213, 46);
+}

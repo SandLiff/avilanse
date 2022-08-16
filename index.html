@@ -7,36 +7,50 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Сайт-порфтоліо</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-	<header class="header">
-		<div class="header__container">
-			<a href="#" class="header__logo"></a>
-			<div class="header__menu menu">
-				<div class="menu__icon">
-					<span></span>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="#" class="header__logo"></a>
+				<div class="header__menu menu">
+					<div class="menu__icon">
+						<span></span>
+					</div>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="#" class="menu__link">Головна</a></li>
+							<li><a href="#" class="menu__link">Про виконання робіт</a></li>
+							<li><a href="#" class="menu__link">Види робіт</a></li>
+							<li><a href="#" class="menu__link">Вартість робіт</a></li>
+							<li>
+								<a href="#" class="menu__link">Контакти</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
-				<nav class="menu__body">
-					<ul class="menu__list">
-						<li><a href="#" class="menu__link">Про мене</a></li>
-						<li><a href="#" class="menu__link">Про виконання робіт</a></li>
-						<li><a href="#" class="menu__link">Види робіт</a></li>
-						<li><a href="#" class="menu__link">Вартість робіт</a></li>
-						<li>
-							<a href="#" class="menu__link">Контакти</a>
-						</li>
-					</ul>
-				</nav>
 			</div>
-		</div>
-	</header>
-	<div class="content">
-		<section id="page__1" class="page__about"></section>
-		<section id="page__2" class="page__aboutworks"></section>
-		<section id="page__3" class="page__works"></section>
-		<section id="page__4" class="page__workscost"></section>
-		<section id="page__5" class="page__contacts"></section>
+		</header>
+		<main class="page">
+			<section class="page__section page__intro">
+				<div class="intro__verstka">
+					<img src="img/main/intro/webverstka.jpg" alt="">
+				</div>
+				<div class="intro__label">
+					<h1 class="intro__title">Привіт!</h1>
+					<h2 class="intro__subtitle">Мене звати Владислав,<br> я займаюсь версткою веб-сайтів.</h2>
+					<a href="https://freelancehunt.com/freelancer/Bonoparte.html" class="intro__button">фріланс-профіль</a>
+				</div>
+			</section>
+			<section class="page__section page__aboutworks"></section>
+			<section class="page__section page__works"></section>
+			<section class="page__section page__workscost"></section>
+			<section class="page__section page__contacts"></section>
+		</main>
 	</div>
 	<script src="js/scipt.js"></script>
 </body>

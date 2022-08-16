@@ -70,6 +70,26 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+/*Setting*/
+/*All*/
+.page {
+  padding: 230px 0px 0px 0px;
+  font-family: sans-serif;
+}
+
+.page__section {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+
 /*Header*/
 body._lock {
   overflow: hidden;
@@ -221,4 +241,45 @@ body._lock {
   .menu__link {
     font-size: 28px;
   }
+}
+/*Main*/
+.page__intro {
+  display: flex;
+  justify-content: center;
+}
+
+.intro__title {
+  color: rgb(206, 82, 4);
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.intro__subtitle {
+  color: rgb(0, 0, 0);
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.intro__label {
+  align-self: center;
+}
+
+.intro__verstka {
+  margin-right: 10px;
+  position: relative;
+}
+
+.intro__button {
+  display: inline-block;
+  background-color: rgb(117, 182, 61);
+  transition: all 0.3s ease;
+  padding: 16px 28px;
+  color: #fff;
+  border-radius: 29px;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+.intro__button:hover {
+  background-color: rgb(124, 213, 46);
 }
