@@ -5,6 +5,8 @@
 .aboutworks__title {
 	font-size: 62px;
 	text-align: center;
+	font-weight: 700;
+	margin: 0px 0px 30px 0px;
 }
 
 .step-1 {
@@ -40,6 +42,45 @@ span {
 }
 
 @media (max-width: 769px) {
+	span {
+		font-size: 50px;
+	}
+
+	.step-1 {
+		background-color: rgb(129, 97, 97);
+		padding: 10px;
+		font-size: 18px;
+	}
+	
+	.step-2 {
+		background-color: rgb(96, 124, 81);
+		padding: 10px;
+		font-size: 18px;
+	}
+	
+	.step-3 {
+		background-color: rgb(122, 130, 63);
+		padding: 10px;
+		font-size: 18px;
+	}
+	
+	.step-4 {
+		background-color: rgb(87, 70, 135);
+		padding: 10px;
+		font-size: 18px;
+	}
+	
+	.step-5 {
+		background-color: rgb(129, 67, 105);
+		padding: 10px;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 400px) {
+	.page__aboutworks {
+		margin-left: 100px;
+	}
 	span {
 		font-size: 50px;
 	}

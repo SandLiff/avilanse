@@ -80,6 +80,12 @@ body._lock {
 }
 
 @media (max-width: 769px) {
+	.menu__link {
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 767px) {
 	.menu__icon {
 		z-index: 5;
 		display: block;

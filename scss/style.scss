@@ -25,12 +25,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 }
 
 .page__section {
+	width: 100%;
 	padding: 30px;
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
 .body {
+	width: 100%;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
@@ -48,3 +50,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 /*About works*/
 
 @import "_aboutworks";
+
+/*Services*/
+
+@import "_services"
