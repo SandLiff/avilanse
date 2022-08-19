@@ -53,4 +53,23 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
 /*Services*/
 
-@import "_services"
+@import "_services";
+
+/*Features*/
+
+@import "_features";
+
+/*Workscost*/
+
+@import "_workscost";
+
+/*Contacts*/
+
+@import "_contacts";
+
+
+@media (max-width: 913px) {
+	body {
+	width: 100%;
+	}
+}

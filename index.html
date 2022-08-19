@@ -13,105 +13,171 @@
 </head>
 
 <body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__container">
-				<a href="#" class="header__logo"></a>
-				<div class="header__menu menu">
-					<div class="menu__icon">
-						<span></span>
+	<header class="header">
+		<div class="header__container">
+			<a href="#" class="header__logo"></a>
+			<div class="header__menu menu">
+				<div class="menu__icon">
+					<span></span>
+				</div>
+				<nav class="menu__body">
+					<ul class="menu__list">
+						<li><a data-goto=".page__intro" href="#" class="menu__link">Головна</a></li>
+						<li><a data-goto=".page__aboutworks" href="#" class="menu__link">Як виконується робота?</a></li>
+						<li><a data-goto=".page__services" href="#" class="menu__link">Технології</a></li>
+						<li><a data-goto=".page__features" href="#" class="menu__link">Переваги</a></li>
+						<li><a data-goto=".page__cost" href="#" class="menu__link">Вартість робіт</a></li>
+						<li><a data-goto=".page__contacts" href="#" class="menu__link">Контакти</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main class="page">
+		<section class="page__section page__intro">
+			<div class="intro__verstka">
+				<img src="img/main/intro/webverstka.jpg" class="intro__img" alt="">
+			</div>
+			<div class="intro__label">
+				<h1 class="intro__title">Привіт!</h1>
+				<h2 class="intro__subtitle">Мене звати Владислав,<br> я займаюсь версткою веб-сайтів.</h2>
+				<a href="https://freelancehunt.com/freelancer/Bonoparte.html" class="intro__button">фріланс-профіль</a>
+				<div class="content__circle"></div>
+				<div class="content__circle"></div>
+			</div>
+		</section>
+		<section class="page__section page__aboutworks">
+			<h1 class="aboutworks__title">Як виконується робота?</h1>
+			<p class="step-1">
+				<span>1.</span>Перевірка технічного завдання, узгодження ціни й термінів для виконання роботи.
+			</p>
+			<p class="step-2">
+				<span>2.</span>Початок роботи: підключення шрифтів, створення/імпорт необхідних файлів і картинок.
+			</p>
+			<p class="step-3">
+				<span>3.</span>Заповнення HTML-документа, робота зі стилями і js файлами. Адаптація веб-сторінки під
+				різні браузери, пристрої і екрани.
+			</p>
+			<p class="step-4">
+				<span>4.</span>Публікація сайту на GitHub, виправлення помилок.
+			</p>
+			<p class="step-5">
+				<span>2.</span>Оплата й передача архіву з файлами. Гарантійний термін: 2 неділі.
+			</p>
+		</section>
+		<div class="page__section page__services">
+			<div class="blocks__title">Технології</div>
+			<div class="blocks__body">
+				<div class="blocks__row">
+					<div class="column">
+						<div class="block__item">
+							<div class="block__img"><img src="img/services/HTML.png" alt="br"></div>
+							<div class="block__text">
+								<p class="block__title">HTML-верстка</p>
+								<p class="block__about">В HTML-документі сторінка зповнюється контентом: кнопками,
+									навігацією, картинками і т.д.</p>
+							</div>
+						</div>
 					</div>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li><a href="#" class="menu__link">Головна</a></li>
-							<li><a href="#" class="menu__link">Як виконується робота?</a></li>
-							<li><a href="#" class="menu__link">Технології</a></li>
-							<li><a href="#" class="menu__link">Переваги</a></li>
-							<li><a href="#" class="menu__link">Вартість робіт</a></li>
-							<li>
-								<a href="#" class="menu__link">Контакти</a>
-							</li>
-						</ul>
-					</nav>
+					<div class="column">
+						<div class="block__item">
+							<div class="block__img"><img src="img/services/CSS.png" alt="br"></div>
+							<div class="block__text">
+								<p class="block__title">CSS-стилізація</p>
+								<p class="block__about">В CSS-документі сторінка стилізується: фон, розмір, анімації,
+									гемоетричні фігури, ефекти при наведенні і т.д.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="blocks__row">
+					<div class="column">
+						<div class="block__item-last">
+							<div class="block__img"><img src="img/services/JS.png" alt="br"></div>
+							<div class="block__text">
+								<p class="block__title">JS-скріпти</p>
+								<p class="block__about">В JavaScript створюється функціонал сайту: спойлери, слайдери, скролл
+									за допомогою навігації, паралакс-ефекти і т.д.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<section class="page__section page__features features">
+			<div class="features__container">
+				<div class="features__body">
+					<h1 class="features__title">Переваги</h1>
+					<div class="body__column">
+						<div class="body__item item-service">
+							<div class="item-service__icon">
+								<img src="img/features/health.png" alt="">
+							</div>
+							<h3 class="item-service__title">Збереження нервів</h3>
+							<div class="item-service__text">Правки і детали які Ви забули внести до макету будуть зверстані
+								без
+								спорів і зайвих витрат.</div>
+						</div>
+					</div>
+					<div class="body__column">
+						<div class="body__item item-service">
+							<div class="item-service__icon">
+								<img src="img/features/time.png" alt="">
+							</div>
+							<h3 class="item-service__title">Збереження часу</h3>
+							<div class="item-service__text">Дрібниці, які Ви могли забути в Т/З будуть внесені в верстку без
+								додаткових запитань.</div>
+						</div>
+					</div>
+					<div class="body__column">
+						<div class="body__item item-service">
+							<div class="item-service__icon">
+								<img src="img/features/money.png" alt="">
+							</div>
+							<h3 class="item-service__title">Економія грошей</h3>
+							<div class="item-service__text">Максимально чистий і зрозумілий код, якісна адаптивна верстка
+								сайту
+								без переплат.</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</header>
-		<main class="page">
-			<section class="page__section page__intro">
-				<div class="intro__verstka">
-					<img src="img/main/intro/webverstka.jpg" alt="">
+		</section>
+		<section class="page__section page__cost">
+			<div class="cost__row">
+				<div class="cost__img">
+					<img src="img/workscost/price.png" alt="">
 				</div>
-				<div class="intro__label">
-					<h1 class="intro__title">Привіт!</h1>
-					<h2 class="intro__subtitle">Мене звати Владислав,<br> я займаюсь версткою веб-сайтів.</h2>
-					<a href="https://freelancehunt.com/freelancer/Bonoparte.html" class="intro__button">фріланс-профіль</a>
-					<div class="content__circle"></div>
-					<div class="content__circle"></div>
-				</div>
-			</section>
-			<section class="page__section page__aboutworks">
-				<h1 class="aboutworks__title">Як виконується робота?</h1>
-				<p class="step-1">
-					<span>1.</span>Перевірка технічного завдання, узгодження ціни й термінів для виконання роботи.
-				</p>
-				<p class="step-2">
-					<span>2.</span>Початок роботи: підключення шрифтів, створення/імпорт необхідних файлів і картинок.
-				</p>
-				<p class="step-3">
-					<span>3.</span>Заповнення HTML-документа, робота зі стилями і js файлами. Адаптація веб-сторінки під
-					різні браузери, пристрої і екрани.
-				</p>
-				<p class="step-4">
-					<span>4.</span>Публікація сайту на GitHub, виправлення помилок.
-				</p>
-				<p class="step-5">
-					<span>2.</span>Оплата й передача архіву з файлами. Гарантійний термін: 2 неділі.
-				</p>
-			</section>
-			<div class="page__section page__services">
-				<div class="blocks__title">Технології</div>
-				<div class="blocks__body">
-					<div class="blocks__row">
-						<div class="column">
-							<div class="block__item">
-								<div class="block__img"><img src="img/services/HTML.png" alt="br"></div>
-								<div class="block__text">
-									<p class="block__title">HTML-верстка</p>
-									<p class="block__about">В HTML-документі сторінка зповнюється контентом: кнопками,
-										навігацією, картинками і т.д.</p>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="block__item">
-								<div class="block__img"><img src="img/services/CSS.png" alt="br"></div>
-								<div class="block__text">
-									<p class="block__title">CSS-стилізація</p>
-									<p class="block__about">В CSS-документі сторінка стилізується: фон, розмір, анімації,
-										гемоетричні фігури, ефекти при наведенні і т.д.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="blocks__row">
-						<div class="column">
-							<div class="block__item-last">
-								<div class="block__img"><img src="img/services/JS.png" alt="br"></div>
-								<div class="block__text">
-									<p class="block__title">JS-скріпти</p>
-									<p class="block__about">В JavaScript створюється функціонал сайту: спойлери, слайдери, скролл
-										за допомогою навігації, паралакс-ефекти і т.д.</p>
-								</div>
-							</div>
-						</div>
-					</div>
+				<div class="cost__body">
+					<div class="cost__label">Адаптивна верстка</div>
+					<div class="cost__text">Ціна: від 15$ за проект</div>
+					<div class="cost__label">Адаптація верстки</div>
+					<div class="cost__text">Ціна: від 5$ за проект</div>
+					<div class="cost__label">Правки в коді</div>
+					<div class="cost__text">Ціна: від 3$ за проект</div>
+					<div class="cost__label">Переробка сайту</div>
+					<div class="cost__text">Ціна: від 10$ за проект</div>
+					<div class="cost__label">Посадка сайту на CMS</div>
+					<div class="cost__text">Ціна: від 6$ за проект</div>
 				</div>
 			</div>
-			<section class="page__section page__features">
-
-			</section>
-			<section class="page__section page__contacts"></section>
-		</main>
+		</section>
+		<section class="page__contacts">
+			<div class="contacts__body">
+				<div class="contacts__title">Контакти</div>
+				<div class="contacts__contact">
+					<a href="https://t.me/VladislavBonoparte"><img src="img/contacts/telegram.png" alt="telegram"></a>
+					<a href="https://freelancehunt.com/freelancer/Bonoparte.html"><img src="img/contacts/fh.png"
+							alt="freelancehunt"></a>
+					<a href="https://instagram.com/vladislavbonoparte"><img src="img/contacts/instagram.png"
+							alt="instagram"></a>
+				</div>
+				<video autoplay loop preload="auto" muted class="full-screen__video">
+					<source type="video/mp4" src="video/contacts.mp4">
+				</video>
+			</div>
+		</section>
+	</main>
 	</div>
 	<script src="js/scipt.js"></script>
 </body>
