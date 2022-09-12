@@ -1,0 +1,432 @@
+//<МИКСИНЫ>
+@mixin anim($time,$delay){-webkit-transition: all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+@mixin anim_cubic($time, $delay) {-webkit-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-moz-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-ms-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;-o-transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;transition:all $time cubic-bezier(0.68,-0.55,0.265,1.55) $delay;}
+@mixin rotate($deg){-moz-transform: rotate($deg);-ms-transform: rotate($deg);-webkit-transform: rotate($deg);-o-transform: rotate($deg);transform: rotate($deg);}
+@mixin scale($num){-moz-transform: scale($num);-ms-transform: scale($num);-webkit-transform: scale($num);-o-transform: scale($num);transform: scale($num);}
+@mixin skew($num){-webkit-transform: skewX($num);-moz-transform: skewX($num);-ms-transform: skewX($num);-o-transform: skewX($num);transform: skewX($num);}
+@mixin cnt($h){display: flex;flex-direction: column;height: $h;text-align: center;align-items: stretch;justify-content: center;}
+@mixin tr($x,$y,$z){transform: translate3d($x, $y, $z);};
+@mixin flexbox() {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;font-size: 0;}
+@mixin flexorder($val){-webkit-box-ordinal-group: $val;-moz-box-ordinal-group: $val;-ms-flex-order: $val;-webkit-order: $val;order: $val;}
+//</МИКСИНЫ>
+
+//<ШРИФТЫ>
+
+//<Подключаем шрифты>
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@font-face {
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	src: url('../fonts/AkzidenzGroteskBQCondensedBold.eot');
+	src: local('☺'), url('../fonts/AkzidenzGroteskBQCondensedBold.woff') format('woff'), url('../fonts/AkzidenzGroteskBQCondensedBold.ttf') format('truetype'), url('../fonts/AkzidenzGroteskBQCondensedBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Bebas';
+	src: url('../fonts/BebasNeueRegular.eot');
+	src: local('☺'), url('../fonts/BebasNeueRegular.woff') format('woff'), url('../fonts/BebasNeueRegular.ttf') format('truetype'), url('../fonts/BebasNeueRegular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+//font-display: swap;
+//</Подключаем шрифты>
+
+
+//<Шрифт по умолчанию>
+$fontfamily:"PT Sans";
+//</Шрифт по умолчанию>
+//</ШРИФТЫ>
+
+//<ПЕРЕМЕННЫЕ>
+$minwidth:320px;
+$mw:880;
+$md1:$mw+12;
+$md2:767.98;
+$md3:767.98;
+$md4:479.98;
+//</ПЕРЕМЕННЫЕ>
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
+*{padding: 0px;margin: 0px;border: 0px;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+aside,nav,footer,header,section{display: block;}
+html,body{height: 100%;margin: 0;padding: 0;min-width: $minwidth;position: relative;width: 100%;color: #000;}
+body{font-size: 100%;line-height: 1;font-size: 14px;font-family: $fontfamily;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;
+	&.lock{overflow: hidden;
+		@media (max-width:$md3+px){
+			width: 100%;
+			position: fixed;
+			overflow: hidden;
+		}
+	}
+}
+input,button,textarea{font-family: $fontfamily;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
+//-webkit-overflow-scrolling: touch;
+//animation-play-state: paused !important;
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>
+
+//<ОБОЛОЧКА>
+.wrapper{width: 100%;min-height: 100%;overflow: hidden;
+	&.loaded{}
+}
+//</ОБОЛОЧКА>
+
+//<ОСНОВНАЯ СЕТКА>
+.container{max-width:$mw+px;margin: 0 auto;width: 100%;
+	@media (max-width:$md1+px){max-width: 750px;}
+	@media (max-width:$md2+px){max-width: none;padding:0 10px;}
+}
+//</ОСНОВНАЯ СЕТКА>
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
+//@import "datepicker.scss";
+//@import "popover.min.scss";
+//@import "baguetteBox.scss";
+//@import "pagging.scss";
+@import "header.scss";
+@import "footer.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>
+
+//<ОСНОВНОЙ БЛОК>
+.private {
+	@include flexbox();
+	background-color: #000;
+	margin: 0px 0px 75px 0px;
+	@media (max-width:$md2+px){
+		margin: 0px 0px 40px 0px;
+	}
+}
+.private__column {flex: 0 0 50%;
+	@media (max-width:$md2+px){
+		flex: 1 1 100%;
+		&:first-child{
+			display: none;
+		}
+	}
+}
+.private__image {
+	height: 100%;
+}
+.private-body {
+	padding: 75px 20px 75px 60px;
+	@media (max-width:$md1+px){
+		padding: 30px 20px 30px 30px;
+	}
+}
+.private-body-content{
+	max-width: 305px;
+}
+
+.private-body__title {
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	font-size: 50px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 0px 0px 30px 0px;
+	@media (max-width:$md1+px){
+		font-size: 35px;
+		margin: 0px 0px 20px 0px;
+	}
+
+}
+.private-body__text {
+	font-size: 15px;
+	line-height: 25px;
+	color: #fff;
+	margin: 0px 0px 50px 0px;
+	@media (max-width:$md1+px){
+		margin: 0px 0px 30px 0px;
+	}
+}
+.private-body-buttons {@include flexbox();align-items: center;}
+.private-body-buttons__item {}
+.private-body-buttons__link {
+	font-family: Bebas;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 15px;
+	text-decoration: underline;
+	margin: 0px 0px 0px 15px;
+	letter-spacing: 1.5px;
+}
+//============================================
+.products {
+	margin: 0px 0px 40px 0px;
+	@media (max-width:$md2+px){
+		margin: 0;
+	}
+}
+.products-body {
+	@include flexbox();
+	@media (max-width:$md2+px){
+		flex-wrap: wrap;
+	}
+}
+.products__column {
+	flex: 0 0 25%;
+	margin: 0px 0px 40px 0px;
+	@media (max-width:$md2+px){
+		flex: 0 0 50%;
+	}
+	@media (max-width:380px){
+		flex: 1 1 100%;
+	}
+}
+.products-item {
+	@include flexbox();
+	height: 100%;
+	flex-direction: column;
+}
+.products-item__image {
+	display: block;
+	padding: 0px 0px 100% 0px;
+	margin: 0px 0px 25px 0px;
+	@media (max-width:380px){
+		margin: 0px 0px 15px 0px;
+	}
+}
+.products-item__title {
+	height: 50px;
+	overflow: hidden;
+	padding: 0px 10px 0px 0px;
+	max-width: 185px;
+	display: block;
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	color: #000;
+	font-size: 25px;
+	margin: 0px 0px 30px 0px;
+	@media (max-width:380px){
+		max-width: none;
+		height: auto;
+		overflow: visible;
+		margin: 0px 0px 20px 0px;
+	}
+}
+.products-item__text {
+	flex: 1 1 auto;
+	padding: 0px 10px 0px 0px;
+	max-width: 185px;
+	font-size: 15px;
+	line-height: 25px;
+	margin: 0px 0px 25px 0px;
+	@media (max-width:380px){
+		max-width: none;
+		margin: 0px 0px 15px 0px;
+	}
+
+}
+.products-item__btn {margin: 0px 0px 29px 0px;}
+.products-item__link {
+	font-family: Bebas;
+	text-transform: uppercase;
+	color: #000;
+	font-size: 15px;
+	letter-spacing: 1.5px;
+	text-decoration: underline;
+}
+//============================================
+.why {}
+.why-top {@include flexbox();background-color: #000;}
+.why-top__column {
+	flex: 0 0 50%;
+	@media (max-width:$md1+px){
+		flex: 1 1 100%;
+		&:last-child{
+			display: none;
+		}
+	}
+}
+.why-top__text {
+	color: #ffffff;
+	text-align: right;
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	font-size: 50px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding: 50px 60px 50px 0px;
+	@media (max-width:$md1+px){
+		padding: 30px 0px;
+		font-size: 40px;
+		text-align: center;
+	}
+	@media (max-width:$md2+px){
+		padding: 20px 0px;
+		font-size: 30px;
+		text-align: center;
+	}
+}
+.why-top__image {
+	height: 100%;
+}
+.why-body {
+	padding: 50px 0 0 0;
+	background-color: #ebebeb;
+	@media (max-width:$md4+px){
+		padding:30px 0 0 0;
+	}
+}
+.why-body-row{
+	@include flexbox();
+	flex-wrap: wrap;
+}
+.why-body__column {
+	flex: 0 0 50%;
+	margin: 0px 0px 50px 0px;
+	@media (max-width:$md1+px){
+		flex: 1 1 100%;
+	}
+	@media (max-width:$md4+px){
+		margin: 0px 0px 30px 0px;
+	}
+}
+.why-body-item {
+	@include flexbox();
+}
+.why-body-item__icon {
+	flex: 0 0 100px;
+	height: 100px;
+	@include flexbox();
+	justify-content:center;align-items: center;
+	background-color: #000000;
+	@media (max-width:$md4+px){
+		flex: 0 0 80px;
+		height: 80px;
+		padding: 15px;
+		img{max-width: 100%;}
+	}
+}
+.why-body-item-body {
+	flex: 1 1 100%;
+	@include flexbox();
+	flex-direction: column;
+	padding: 0px 0px 0px 11px;
+}
+.why-body-item-body__title {
+	flex: 1 1 auto;
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-size: 25px;
+	@media (max-width:$md4+px){
+		font-size: 20px;
+	}
+}
+.why-body-item-body__text {
+	font-size: 15px;
+	padding: 0px 15px 0px 0px;
+	line-height: 25px;
+}
+//============================================
+.contacts {padding: 80px 0px 0px 0px;
+	@media (max-width:$md2+px){
+		padding: 30px 0px 0px 0px;
+	}
+}
+.contacts-top {}
+.contacts__title {
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	text-transform: uppercase;
+	font-size: 50px;
+	letter-spacing: 5px;
+	margin: 0px 0px 30px 0px;
+}
+.contacts-body {
+	@include flexbox();
+	flex-wrap: wrap;
+}
+.contacts-body__column {
+	flex: 0 0 50%;
+	margin: 0px 0px 20px 0px;
+	@media (max-width:$md2+px){
+		flex: 1 1 100%;
+	}
+}
+.contacts-body__item {
+	font-size: 15px;
+	color: #000;
+	display: inline-block;
+	line-height: 27px;
+	padding: 0px 0px 0px 35px;
+}
+.contacts-body__item--1 {
+	background: url('../img/contacts/01.svg') left no-repeat;
+}
+.contacts-body__item--2 {
+	background: url('../img/contacts/02.svg') left no-repeat;
+}
+.contacts-body__item--3 {
+	background: url('../img/contacts/03.svg') left no-repeat;
+}
+
+.contacts-social {
+	@include flexbox();
+
+}
+.contacts-social__item {
+	margin: 0px 30px 0px 0px;
+	&:last-child{margin:0px 0px 0px 0px;}
+}
+.contacts-content {
+	@include flexbox();
+	background-color: #000;
+	@media (max-width:$md2+px){
+		display: block;
+	}
+}
+.contacts-content__column {
+	flex: 0 0 50%;
+}
+.contacts-content__map {
+	height: 100%;
+	@media (max-width:$md2+px){
+		height: 300px;
+	}
+}
+.contacts-content-form {
+	padding: 55px 60px;
+	@media (max-width:$md2+px){
+		padding: 30px;
+	}
+}
+.contacts-content-form__title {
+	font-family: 'AkzidenzGroteskBQCondensedBold';
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 25px;
+	letter-spacing: 5px;
+	margin: 0px 0px 30px 0px;
+}
+.contacts-content-form-body {
+	max-width: 375px;
+	@media (max-width:$md2+px){
+		max-width: none;
+	}
+}
+.contacts-content-form-line {
+	margin: 0px 0px 25px 0px;
+}
+.contacts-content-form-button {}
+.contacts-content-form__btn {}
+
+
+//</ОСНОВНОЙ БЛОК>
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
+@import "forms.scss";
+@import "ui.scss";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>
