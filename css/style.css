@@ -141,10 +141,11 @@ body {
 */
 
 [class*=__container] {
-  margin: 0 auto;
   max-width: 75rem;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
 }
 
 body::after {
@@ -427,65 +428,33 @@ body._lock {
   }
 }
 
-@media (max-width: 76.875em) {
-  [class*=__container] {
-    max-width: 60.625rem;
-  }
-}
-
-@media (max-width: 62.1875em) {
-  .intro__buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 10px;
-  }
-}
-
 @media (max-width: 61.99875em) {
-  [class*=__container] {
-    max-width: 46.875rem;
-  }
-}
-
-@media (max-width: 48.4375em) {
   .intro__title {
-    margin-top: 20px;
     font-size: 30px;
+    text-align: center;
+  }
+
+  .intro__text {
+    font-size: 16px;
     text-align: center;
   }
 
   .intro__img {
     text-align: center;
+    margin-top: -17px;
   }
 
   .intro__img img {
-    width: 300px;
-    height: 600px;
+    width: 160px;
+    height: 300px;
   }
 
-  .intro__text {
-    text-align: center;
-  }
-
-  .intro__butons {
-    text-align: center;
+  .intro__buttons {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 42.62375em) {
-  [class*=__container] {
-    max-width: none;
-    padding: 0 0.9375rem;
-  }
-
   .menu__icon {
     margin-top: 15px;
     z-index: 5;
@@ -590,5 +559,47 @@ body._lock {
 
   .menu__link {
     font-size: 36px;
+  }
+
+  .intro__title {
+    font-size: 27px;
+  }
+
+  .intro__Text {
+    font-size: 14px;
+  }
+
+  .intro__buttons {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  .intro__text {
+    margin-top: -20px;
+    font-size: 10px;
+  }
+
+  .intro__img {
+    margin-top: -30px;
+  }
+
+  .intro__buttons {
+    font-size: 9px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .intro__title {
+    font-size: 20px;
   }
 }
