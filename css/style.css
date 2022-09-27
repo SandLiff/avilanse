@@ -576,16 +576,18 @@ body._lock {
 
 @media (max-width: 29.99875em) {
   .intro__text {
-    margin-top: -20px;
-    font-size: 10px;
+    margin-top: -25px;
+    margin-bottom: -25px;
+    font-size: 12px;
   }
 
   .intro__img {
-    margin-top: -30px;
+    margin-top: -20px;
+    margin-bottom: 20px;
   }
 
   .intro__buttons {
-    font-size: 9px;
+    font-size: 11px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -600,6 +602,6 @@ body._lock {
   }
 
   .intro__title {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
