@@ -1,6 +1,36 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Inter:italic,regular,500,500italic,600,700&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Manrope:regular,700&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular&display=swap);
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,700&display=swap);
 
 @charset "UTF-8";
+
+@font-face {
+  font-family: AvenirNext;
+  font-display: swap;
+  src: url("../fonts/AvenirNext-Bold.woff2") format("woff2"), url("../fonts/AvenirNext-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: AvenirNext;
+  font-display: swap;
+  src: url("../fonts/AvenirNext-DemiBold.woff2") format("woff2"), url("../fonts/AvenirNext-DemiBold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Leifa;
+  font-display: swap;
+  src: url("../fonts/Leifa-ExtraBold.woff2") format("woff2"), url("../fonts/Leifa-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
 
 * {
   padding: 0px;
@@ -22,9 +52,9 @@ body {
 }
 
 body {
-  color: #666666;
+  color: #FFFFFF;
   line-height: 1;
-  font-family: "Poppins";
+  font-family: "Inter";
   font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -36,7 +66,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Poppins";
+  font-family: "Inter";
   font-size: inherit;
 }
 
@@ -141,6 +171,24 @@ h6 {
      object-fit: contain;
 }
 
+.button {
+  display: inline-block;
+  background: #2E4FD7;
+  border-radius: 1px;
+  padding: 0.9375rem 1.5625rem;
+  text-align: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-size: 0.875rem;
+}
+
+.button:hover {
+  background: #093aff;
+  -webkit-box-shadow: 0 0 5px #093aff;
+          box-shadow: 0 0 5px #093aff;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,13 +199,38 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 3.875rem;
-  z-index: 100;
+  min-height: 3.75rem;
+}
+
+.header__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__logo {
-  position: relative;
-  z-index: 5;
+  z-index: 2;
+}
+
+.header__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 0.3125rem 1.25rem;
+  z-index: 2;
 }
 
 .menu__item {
@@ -165,17 +238,28 @@ h6 {
 }
 
 .menu__link {
+  color: #1E1E1E;
+  position: relative;
+  padding-bottom: 0.3125rem;
+}
+
+.menu__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.09375rem;
+  background-color: #1E1E1E;
+  opacity: 0;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  color: #000;
-  opacity: 40%;
-  font-weight: 500;
-  font-size: 15px;
 }
 
-.menu__link:hover {
-  opacity: 100%;
+.menu__link:hover::after {
+  content: "";
+  opacity: 1;
 }
 
 .icon-menu {
@@ -189,28 +273,53 @@ h6 {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    row-gap: 0.3125rem;
   }
 }
 
-@media (min-width: 47.99875em) and (min-width: 48.0625em) {
+@media (min-width: 47.99875em) and (min-width: 56.25em) {
   .menu__list {
-    gap: 3.4375rem;
+    -webkit-column-gap: 1.9375rem;
+       -moz-column-gap: 1.9375rem;
+            column-gap: 1.9375rem;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .header__navigation {
+    gap: 3.3125rem;
+  }
+}
+
+@media (max-width: 48.75em) {
+  .header__navigation {
+    gap: 1.25rem;
   }
 }
 
 @media (max-width: 47.99875em) {
+  .header__button {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .header__button img {
+    display: none;
+  }
+
   .menu__body {
     position: fixed;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
+    overflow: auto;
+    background-color: #052825;
+    padding: 6.875rem 0.9375rem 1.875rem 0.9375rem;
     -webkit-transition: left 0.3s ease 0s;
     -o-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
-    background-color: rgb(0, 0, 0);
-    overflow: auto;
-    padding: 7.5rem 0.9375rem 1.875rem 0.9375rem;
   }
 
   .menu__body::before {
@@ -219,9 +328,9 @@ h6 {
     top: 0;
     left: -100%;
     width: 100%;
-    height: 3.875rem;
-    background-color: rgb(33, 33, 33);
-    z-index: 100;
+    height: 3.125rem;
+    background-color: #052825;
+    z-index: 2;
     -webkit-transition: left 0.3s ease 0s;
     -o-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
@@ -237,13 +346,12 @@ h6 {
   }
 
   .menu__item:not(:last-child) {
-    margin-bottom: 50px;
+    margin-bottom: 1.5625rem;
   }
 
   .menu__link {
     color: #fff;
-    font-size: 38px;
-    opacity: 1;
+    font-size: 2rem;
   }
 
   .icon-menu {
@@ -265,7 +373,7 @@ h6 {
     position: absolute;
     width: 100%;
     height: 0.125rem;
-    background-color: rgb(128, 128, 128);
+    background-color: rgb(0, 0, 0);
   }
 
   .icon-menu::before {
@@ -305,22 +413,42 @@ h6 {
   }
 }
 
-@media (min-width: 47.99875em) and (min-width: 20em) and (max-width: 48.0625em) {
-@supports (gap: clamp( 0.625rem , -1.379454343rem  +  10.0222717149vw , 3.4375rem )) {
-    .menu__list {
-      gap: clamp( 0.625rem , -1.379454343rem  +  10.0222717149vw , 3.4375rem );
+@media (min-width: 48.75em) and (max-width: 56.25em) {
+@supports (gap: clamp( 1.25rem , -12.15625rem  +  27.5vw , 3.3125rem )) {
+    .header__navigation {
+      gap: clamp( 1.25rem , -12.15625rem  +  27.5vw , 3.3125rem );
     }
 }
 
-@supports not (gap: clamp( 0.625rem , -1.379454343rem  +  10.0222717149vw , 3.4375rem )) {
-    .menu__list {
-      gap: calc(0.625rem + 2.8125 * (100vw - 20rem) / 28.0625);
+@supports not (gap: clamp( 1.25rem , -12.15625rem  +  27.5vw , 3.3125rem )) {
+    .header__navigation {
+      gap: calc(1.25rem + 2.0625 * (100vw - 48.75rem) / 7.5);
     }
 }
 }
 
-@media (min-width: 47.99875em) and (max-width: 20em) {
+@media (min-width: 47.99875em) and (min-width: 50em) and (max-width: 56.25em) {
+@supports ((-moz-column-gap: clamp( 1.25rem , -4.25rem  +  11vw , 1.9375rem )) or (column-gap: clamp( 1.25rem , -4.25rem  +  11vw , 1.9375rem ))) {
+    .menu__list {
+      -webkit-column-gap: clamp( 1.25rem , -4.25rem  +  11vw , 1.9375rem );
+         -moz-column-gap: clamp( 1.25rem , -4.25rem  +  11vw , 1.9375rem );
+              column-gap: clamp( 1.25rem , -4.25rem  +  11vw , 1.9375rem );
+    }
+}
+
+@supports not ((-moz-column-gap: clamp( 1.25rem , -4.25rem  +  11vw , 1.9375rem )) or (column-gap: clamp( 1.25rem , -4.25rem  +  11vw , 1.9375rem ))) {
+    .menu__list {
+      -webkit-column-gap: calc(1.25rem + 0.6875 * (100vw - 50rem) / 6.25);
+         -moz-column-gap: calc(1.25rem + 0.6875 * (100vw - 50rem) / 6.25);
+              column-gap: calc(1.25rem + 0.6875 * (100vw - 50rem) / 6.25);
+    }
+}
+}
+
+@media (min-width: 47.99875em) and (max-width: 50em) {
   .menu__list {
-    gap: 0.625rem;
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
   }
 }
