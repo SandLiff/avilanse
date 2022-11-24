@@ -515,6 +515,69 @@ h6 {
   padding-top: 7.25rem;
 }
 
+.process__container {
+  padding: 0rem 3.125rem;
+  padding-top: 11.1875rem;
+}
+
+.process__title {
+  font-size: 2.625rem;
+  letter-spacing: -0.0180952381em;
+  font-weight: 700;
+  color: #18191f;
+  margin-bottom: 4.25rem;
+}
+
+.process__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.875rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.process__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.process__item::before {
+  content: "";
+  width: 100%;
+  height: 1.5rem;
+  background: url("../img/Process/Indication.svg") 0 0 no-repeat;
+  margin-bottom: 1rem;
+}
+
+.process__item:last-child::before {
+  content: "";
+  width: 100%;
+  height: 1.5rem;
+  background: url("../img/Process/IndicationCircle.svg") 0 0 no-repeat;
+  margin-bottom: 1rem;
+}
+
+.process__caption {
+  font-size: 1.5rem;
+  letter-spacing: -0.0179166667em;
+  color: #18191f;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.process__text {
+  line-height: 1.625;
+  letter-spacing: -0.018125em;
+  max-width: 15.9375rem;
+}
+
 /**
  * Swiper 7.2.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1485,6 +1548,25 @@ button.swiper-pagination-bullet {
   .story__image {
     padding-top: 2.5rem;
   }
+
+  .process__container {
+    padding-top: 3.125rem;
+  }
+
+  .process__title {
+    text-align: center;
+  }
+
+  .process__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.25rem;
+  }
 }
 
 @media (max-width: 60.5625em) {
@@ -1760,6 +1842,15 @@ button.swiper-pagination-bullet {
 @media (max-width: 29.99875em) {
   .features__item {
     gap: 1.25rem;
+  }
+
+  .process__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
